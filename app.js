@@ -66,6 +66,9 @@ export default () => {
               value={curr}
               onChange={e => setCurr(e.target.value)}
             />
+            <div>
+              (put this number in in pennies. no decimals. so $10.00 == 1000
+            </div>
           </Wrapper>
           <Wrapper>
             <Label>Pay periods left in year</Label>
@@ -75,7 +78,7 @@ export default () => {
               value={periodsLeft}
               onChange={e => setPeriodsLeft(e.target.value)}
             />
-            <div>(this is our best guess; could be wrong)</div>
+            <div>(this is our best guess; could be wrong on holidays)</div>
           </Wrapper>
           <hr />
           <Wrapper>
@@ -107,7 +110,7 @@ const Totals = ({ kuali, curr, periodsLeft, maxContrib }) => {
   return (
     <>
       <Wrapper>
-        <Label>This year you've paid</Label>
+        <Label>2020 HSA contributions to date</Label>
         <Value>{fmt(curr)}</Value>
       </Wrapper>
       <Wrapper>
