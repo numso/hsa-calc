@@ -104,7 +104,6 @@ export default () => {
 const Totals = ({ kuali, curr, periodsLeft, maxContrib }) => {
   const kualiPays = (kuali / NUM_PAY_PERIODS) * periodsLeft
   const youPay = maxContrib * periodsLeft
-  console.log({ curr, kualiPays, youPay })
   return (
     <>
       <Wrapper>
